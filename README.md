@@ -115,7 +115,6 @@ Called when an error is encountered
 EXAMPLE USAGE
 -------------
 
-	var util = require('util');
 	var xml = require("./lib/node-xml");
 	
 	var parser = new xml.SaxParser(function(cb) {
@@ -126,27 +125,27 @@ EXAMPLE USAGE
 		
 	  });
 	  cb.onStartElementNS(function(elem, attrs, prefix, uri, namespaces) {
-	      util.log("=> Started: " + elem + " uri="+uri +" (Attributes: " + JSON.stringify(attrs) + " )");
+	      console.log("=> Started: " + elem + " uri="+uri +" (Attributes: " + JSON.stringify(attrs) + " )");
 	  });
 	  cb.onEndElementNS(function(elem, prefix, uri) {
-	      util.log("<= End: " + elem + " uri="+uri + "\n");
+	      console.log("<= End: " + elem + " uri="+uri + "\n");
 	         parser.pause();// pause the parser
 	         setTimeout(function (){parser.resume();}, 200); //resume the parser
 	  });
 	  cb.onCharacters(function(chars) {
-	      //util.log('<CHARS>'+chars+"</CHARS>");
+	      //console.log('<CHARS>'+chars+"</CHARS>");
 	  });
 	  cb.onCdata(function(cdata) {
-	      util.log('<CDATA>'+cdata+"</CDATA>");
+	      console.log('<CDATA>'+cdata+"</CDATA>");
 	  });
 	  cb.onComment(function(msg) {
-	      util.log('<COMMENT>'+msg+"</COMMENT>");
+	      console.log('<COMMENT>'+msg+"</COMMENT>");
 	  });
 	  cb.onWarning(function(msg) {
-	      util.log('<WARNING>'+msg+"</WARNING>");
+	      console.log('<WARNING>'+msg+"</WARNING>");
 	  });
 	  cb.onError(function(msg) {
-	      util.log('<ERROR>'+JSON.stringify(msg)+"</ERROR>");
+	      console.log('<ERROR>'+JSON.stringify(msg)+"</ERROR>");
 	  });
 	});
 	
