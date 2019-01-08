@@ -8,7 +8,7 @@ Contributions from David Joham
 
 # Install
 
-		npm install node-xml
+	npm install node-xml
 
 API
 ---
@@ -19,44 +19,43 @@ SaxParser
 
 Node-xml provides a SAX2 parser interface that can take a string, file. The parser can take characters from the document in chunks. To send chunks of the document to the parser use 'parseString(xml)'
 
-#SAX Parser#
+# SAX Parser
 
-##new xml.SaxParser()##
-	* Instantiate a new SaxParser
-	* returns: a SaxParser object
+## new xml.SaxParser()
+* Instantiate a new SaxParser
+* returns: a SaxParser object
 
-##new xml.SaxParser(callback)##
-	* Instantiate a new SaxParser
-	* returns: a SaxParser object
-	* Arguments
-		*callback - a function that accepts the new sax parser as an argument
+## new xml.SaxParser(callback)
+* Instantiate a new SaxParser
+* returns: a SaxParser object
+* Arguments
+	* callback - a function that accepts the new sax parser as an argument
 	
-#Parse#
+# Parse
 
-##parser.parseString(string)##
-
-Parse an in memory string
+## parser.parseString(string)
+* Parse an in memory string
 * return: boolean. true if no errors, false otherwise
 * Arguments
 	* string - a string representing the document to parse
 	
-##parser.pause()##
+## parser.pause()
 pauses parsing of the document
 
-##parser.resume()##
+## parser.resume()
 resumes parsing of the document
 
-#Callbacks#
+# Callbacks
 
-##parser.onStartDocument(function() {})##
+## parser.onStartDocument(function() {})
 
 Called at the start of a document
 
-##parse.onEndDocument(function() {})##
+## parse.onEndDocument(function() {})
 
  Called at the end of the document parse
 
-##parser.onStartElementNS(function(elem, attrs, prefix, uri, namespaces) {})##
+## parser.onStartElementNS(function(elem, attrs, prefix, uri, namespaces) {})
 
 Called on an open element tag
 * Arguments
@@ -66,7 +65,7 @@ Called on an open element tag
 	* uri - the namespace URI of the element
 	* namespaces - an array of arrays: [[prefix, uri], [prefix, uri]]
 
-##parser.onEndElementNS(function(elem, prefix, uri) {})##
+## parser.onEndElementNS(function(elem, prefix, uri) {})
 
 Called at the close of an element
 * Arguments
@@ -74,31 +73,31 @@ Called at the close of an element
     * prefix - a string representing the namespace prefix of the element
     * uri - the namespace URI of the element
 
-##parser.onCharacters(function(chars) {})##
+## parser.onCharacters(function(chars) {})
 
 Called when a set of content characters is encountered
 * Arguments
 	* chars - a string of characters
 
-##parser.onCdata(function(cdata) {})##
+## parser.onCdata(function(cdata) {})
 
 Called when a CDATA is encountered
 * Arguments
 	* cdata - a string representing the CDATA
 
-##parser.onComment(function(msg) {})##
+## parser.onComment(function(msg) {})
 
 Called when a comment is encountered
 * Arguments
 	* msg - a string representing the comment
 
-##parser.onWarning(function(msg) {})##
+## parser.onWarning(function(msg) {})
 
 Called when a warning is encountered
 * Arguments
 	* msg - a string representing the warning message
 
-##parser.onError(function(msg) {})##
+## parser.onError(function(msg) {})
 
 Called when an error is encountered
    * Arguments
