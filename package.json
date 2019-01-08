@@ -1,21 +1,18 @@
 {
-    "name": "node-xml",
+    "name": "sax-parser",
     "version": "1.0.2",
     "directories": {
         "lib": "./lib"
     },
-    "main": "./lib/node-xml",
-    "engines": {
-        "node" : ">=0.1.93"
-    },
+    "main": "./lib/sax-parser",
     "dependencies": {
     },
-    "description": "An xml parser for node.js written in Javascript.",
+    "description": "An xml parser written in JavaScript.",
     "author": "Rob Righter <robrighter@gmail.com>",
-    "homepage": "https://github.com/robrighter/node-xml",
+    "homepage": "https://github.com/leoz/sax-parser",
     "repository" :
     {
         "type" : "git",
-        "url" : "git://github.com/robrighter/node-xml.git"
+        "url" : "git://github.com/leoz/sax-parser.git"
     }
 }

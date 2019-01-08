@@ -1,14 +1,14 @@
-node-xml
+sax-parser
 ===================
 
 (C) Rob Righter (@robrighter) 2009 - 2010, Licensed under the MIT-LICENSE
 Contributions from David Joham
 
- node-xml is an xml parser for node.js written in javascript. 
+ sax-parser is an xml parser written in javascript. 
 
 # Install
 
-	npm install node-xml
+	npm install sax-parser
 
 API
 ---
@@ -17,7 +17,7 @@ API
 SaxParser
 ---------
 
-Node-xml provides a SAX2 parser interface that can take a string, file. The parser can take characters from the document in chunks. To send chunks of the document to the parser use 'parseString(xml)'
+Sax-parser provides a SAX2 parser interface that can take a string, file. The parser can take characters from the document in chunks. To send chunks of the document to the parser use 'parseString(xml)'
 
 # SAX Parser
 
@@ -107,7 +107,7 @@ Called when an error is encountered
 EXAMPLE USAGE
 -------------
 
-	var xml = require("./lib/node-xml");
+	var xml = require("./lib/sax-parser");
 	
 	var parser = new xml.SaxParser(function(cb) {
 	  cb.onStartDocument(function() {

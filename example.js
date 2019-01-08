@@ -1,4 +1,4 @@
-var xml = require("./lib/node-xml");
+var xml = require("./lib/sax-parser");
 
 var parser = new xml.SaxParser(function(cb) {
   cb.onStartDocument(function() {
