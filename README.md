@@ -1,6 +1,6 @@
 # SAX Parser
 
-[![npm version](https://badge.fury.io/js/sax-parser.svg)](https://badge.fury.io/js/sax-parser)
+[![npm version](https://badge.fury.io/js/sax-parser.svg)](https://badge.fury.io/js/sax-parser) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 sax-parser is an xml parser written in javascript. 
 
@@ -105,35 +105,41 @@ Called when an error is encountered
 var xml = require("./lib/sax-parser");
 
 var parser = new xml.SaxParser(function(cb) {
-	cb.onStartDocument(function() {
-	
-	});
-	cb.onEndDocument(function() {
-	
-	});
-	cb.onStartElementNS(function(elem, attrs, prefix, uri, namespaces) {
-		console.log("=> Started: " + elem + " uri="+uri +" (Attributes: " + JSON.stringify(attrs) + " )");
-	});
-	cb.onEndElementNS(function(elem, prefix, uri) {
-		console.log("<= End: " + elem + " uri="+uri + "\n");
-			parser.pause();// pause the parser
-			setTimeout(function (){parser.resume();}, 200); //resume the parser
-	});
-	cb.onCharacters(function(chars) {
-		//console.log('<CHARS>'+chars+"</CHARS>");
-	});
-	cb.onCdata(function(cdata) {
-		console.log('<CDATA>'+cdata+"</CDATA>");
-	});
-	cb.onComment(function(msg) {
-		console.log('<COMMENT>'+msg+"</COMMENT>");
-	});
-	cb.onWarning(function(msg) {
-		console.log('<WARNING>'+msg+"</WARNING>");
-	});
-	cb.onError(function(msg) {
-		console.log('<ERROR>'+JSON.stringify(msg)+"</ERROR>");
-	});
+  cb.onStartDocument(function() {});
+  cb.onEndDocument(function() {});
+  cb.onStartElementNS(function(elem, attrs, prefix, uri, namespaces) {
+    console.log(
+      "=> Started: " +
+        elem +
+        " uri=" +
+        uri +
+        " (Attributes: " +
+        JSON.stringify(attrs) +
+        " )"
+    );
+  });
+  cb.onEndElementNS(function(elem, prefix, uri) {
+    console.log("<= End: " + elem + " uri=" + uri + "\n");
+    parser.pause(); // pause the parser
+    setTimeout(function() {
+      parser.resume();
+    }, 100); //resume the parser
+  });
+  cb.onCharacters(function(chars) {
+    console.log("<CHARS>" + chars + "</CHARS>");
+  });
+  cb.onCdata(function(cdata) {
+    console.log("<CDATA>" + cdata + "</CDATA>");
+  });
+  cb.onComment(function(msg) {
+    console.log("<COMMENT>" + msg + "</COMMENT>");
+  });
+  cb.onWarning(function(msg) {
+    console.log("<WARNING>" + msg + "</WARNING>");
+  });
+  cb.onError(function(msg) {
+    console.log("<ERROR>" + JSON.stringify(msg) + "</ERROR>");
+  });
 });
 
 //example read from chunks
@@ -152,7 +158,7 @@ parser.parseString("></html>");
 
 ## Author
 
-* Copyright (c) 2009 - 2010 Rob Righter (@robrighter)
+* Copyright 2009 - 2010 © Rob Righter (@robrighter)
 * Contributions from David Joham
 
 ## License
