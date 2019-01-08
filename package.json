@@ -1,16 +1,31 @@
 {
   "name": "sax-parser",
   "version": "2.0.0",
+  "description": "An xml parser written in JavaScript",
+  "main": "./lib/sax-parser",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "directories": {
     "lib": "./lib"
   },
-  "main": "./lib/sax-parser",
-  "dependencies": {},
-  "description": "An xml parser written in JavaScript.",
-  "author": "Rob Righter <robrighter@gmail.com>",
-  "homepage": "https://github.com/leoz/sax-parser",
   "repository": {
     "type": "git",
     "url": "git://github.com/leoz/sax-parser.git"
-  }
+  },
+  "keywords": [
+    "xml",
+    "sax",
+    "parser"
+  ],
+  "author": "Rob Righter <robrighter@gmail.com>",
+  "contributors": [
+    "Leonid Zolotarev <leoz@yahoo.com> (http://leoz.org)",
+    "Adam Wilson <adam@codegarden.co.uk>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leoz/sax-parser/issues"
+  },
+  "homepage": "https://github.com/leoz/sax-parser"
 }
