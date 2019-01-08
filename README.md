@@ -39,13 +39,6 @@ Parse an in memory string
 * return: boolean. true if no errors, false otherwise
 * Arguments
 	* string - a string representing the document to parse
-
-##parser.parseFile(filename)##
-
-Parse a file
-* return: boolean. true if no errors, false otherwise
-* Arguments
-	* filename - a string representing the file to be parsed
 	
 ##parser.pause()##
 pauses parsing of the document
@@ -162,6 +155,3 @@ EXAMPLE USAGE
 	parser.parseString(" cdata ]]>");
 	parser.parseString("</body");
 	parser.parseString("></html>");
-
-	//example read from file
-	parser.parseFile("sample.xml");
