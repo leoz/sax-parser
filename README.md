@@ -30,7 +30,6 @@ SAX Parser provides a SAX2 parser interface that can take a string, file. The pa
 
 ### parser.parseString(string)
 * Parse an in memory string
-* return: boolean. true if no errors, false otherwise
 * Arguments
 	* string - a string representing the document to parse
 	
