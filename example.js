@@ -1,17 +1,17 @@
 var xml = require("./lib/sax-parser");
 
 var parser = new xml.SaxParser(function (cb) {
-  cb.onStartDocument(function () { });
-  cb.onEndDocument(function () { });
+  cb.onStartDocument(function () {});
+  cb.onEndDocument(function () {});
   cb.onStartElementNS(function (elem, attrs, prefix, uri, namespaces) {
     console.log(
       "=> Started: " +
-      elem +
-      " uri=" +
-      uri +
-      " (Attributes: " +
-      JSON.stringify(attrs) +
-      " )"
+        elem +
+        " uri=" +
+        uri +
+        " (Attributes: " +
+        JSON.stringify(attrs) +
+        " )"
     );
   });
   cb.onEndElementNS(function (elem, prefix, uri) {

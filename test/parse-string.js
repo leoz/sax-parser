@@ -14,13 +14,13 @@ var parser = new xml.SaxParser(function (cb) {
   cb.onStartElementNS(function (elem, attrs, prefix, uri, namespaces) {
     console.log(
       offset +
-      "=> Started: " +
-      elem +
-      " uri=" +
-      uri +
-      " (Attributes: " +
-      JSON.stringify(attrs) +
-      " )"
+        "=> Started: " +
+        elem +
+        " uri=" +
+        uri +
+        " (Attributes: " +
+        JSON.stringify(attrs) +
+        " )"
     );
   });
   cb.onEndElementNS(function (elem, prefix, uri) {
